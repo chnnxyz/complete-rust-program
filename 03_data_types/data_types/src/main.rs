@@ -123,4 +123,16 @@ fn main() {
     let str1: &str = "str";
     println!("{}", str1);
 
+    // String slices can refer to strings or string literals.
+    // String slices dont allocate memory
+    // the previous to_string method converts &str into String
+    // referencing the string with & makes it into &str
+
+    // String Literals
+    // String and &str are valid utf8
+    // String Literals are good for non utf-8
+    // they are essentially &str for non-valid utf8
+    let rust = "\x52\x75\x73\x74";
+    println!("{}", rust);
+
 }
